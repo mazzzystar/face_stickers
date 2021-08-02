@@ -64,7 +64,7 @@ print ('>>>>>>>', mask_h, mask_w, mask_c)
 
 
 mtcnn = MTCNN('./pb/mtcnn.pb')
-img = cv2.imread( './test_img/004.jpg' )
+img = cv2.imread( './test_img/002.jpg' )
 # 高宽通道    (坐标取值为y, x)
 h, w, c = img.shape
 print ('>>>>>>>', h, w, c) 
@@ -99,7 +99,7 @@ start_time = time.time()
 srcData, ret  = trent_sticker( img, w, h, 3, im_array, mask_w, mask_h, 4, srcFacePoints, maskFacePoints, 100 ) 
 print ( 'time >>>>', time.time() - start_time )
 img_mask = np.array(srcData, dtype=np.uint8) 
-cv2.imwrite('res.jpg', img_mask) 
+cv2.imwrite('res.jpg', img_mask)
 
 
 
